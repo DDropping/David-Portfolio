@@ -8,7 +8,7 @@ const lineRight = ({ path }) => {
         <div>
           <motion.div
             style={{
-              width: "100px",
+              width: "80px",
               height: "100%",
               borderLeft: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
@@ -19,14 +19,14 @@ const lineRight = ({ path }) => {
               y: 0,
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
             exit={{
               y: "100vh",
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
           />
@@ -43,14 +43,14 @@ const lineRight = ({ path }) => {
               y: 0,
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
             exit={{
               y: "100vh",
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
           />

@@ -9,7 +9,7 @@ const lineBottom = ({ path }) => {
           <motion.div
             style={{
               width: "100%",
-              height: "100px",
+              height: "80px",
               borderTop: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
               bottom: 0,
@@ -19,14 +19,14 @@ const lineBottom = ({ path }) => {
               x: 0,
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
             exit={{
               x: "-100vw",
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
           />
@@ -43,14 +43,14 @@ const lineBottom = ({ path }) => {
               x: 0,
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
             exit={{
               x: "-100vw",
               transition: {
                 ease: "easeOut",
-                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+                duration: Math.random() * (7 - 4 + 1) + 4,
               },
             }}
           />
