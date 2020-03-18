@@ -1,10 +1,10 @@
 import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 import navbarStyles from "./navbar.module.scss"
 
-const navbar = () => {
+const navbar = ({ path }) => {
   return (
     <div className={navbarStyles.container}>
       <motion.ul>
@@ -12,7 +12,7 @@ const navbar = () => {
           initial={{ y: "-100px" }}
           animate={{ y: 0 }}
           transition={{ delay: 0.15 }}
-          style={{ display: "inline-block", margin: "0 20px" }}
+          className={navbarStyles.link}
         >
           <TransitionLink
             className={navbarStyles.link}
@@ -25,10 +25,10 @@ const navbar = () => {
         </motion.li>
 
         <motion.li
+          className={navbarStyles.link}
           initial={{ y: "-100px" }}
           animate={{ y: 0 }}
           transition={{ delay: 0.3 }}
-          style={{ display: "inline-block", margin: "0 20px" }}
         >
           <TransitionLink
             className={navbarStyles.link}
@@ -41,10 +41,10 @@ const navbar = () => {
         </motion.li>
 
         <motion.li
+          className={navbarStyles.link}
           initial={{ y: "-100px" }}
           animate={{ y: 0 }}
           transition={{ delay: 0.45 }}
-          style={{ display: "inline-block", margin: "0 20px" }}
         >
           <TransitionLink
             className={navbarStyles.link}

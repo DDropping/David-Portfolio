@@ -34,7 +34,7 @@ const Layout = ({ children, path }) => {
         <LineLeft path={path} />
       </div>
 
-      <Navbar />
+      <Navbar path={path} />
       <HomeIcon path={path} />
       {children}
     </div>

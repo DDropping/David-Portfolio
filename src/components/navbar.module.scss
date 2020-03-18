@@ -8,6 +8,8 @@
 .link {
   text-decoration: none;
   color: #3ea8b9;
+  padding: 2px;
+  margin: 0 5px;
 }
 
 ul {
@@ -19,5 +21,5 @@ li {
   display: inline-block;
   font-size: 1.5rem;
   text-align: 1.5rem;
-  backface-visibility: hidden;
+  padding: "10px 20px";
 }
