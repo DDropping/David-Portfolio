@@ -10,7 +10,7 @@ const lineBottom = ({ path }) => {
             style={{
               width: "100%",
               height: "100px",
-              borderTop: "5px solid #3ea8b94a",
+              borderTop: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
               bottom: 0,
             }}
@@ -34,7 +34,7 @@ const lineBottom = ({ path }) => {
             style={{
               width: "100%",
               height: "90px",
-              borderTop: "5px solid #3ea8b94a",
+              borderTop: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
               bottom: 0,
             }}

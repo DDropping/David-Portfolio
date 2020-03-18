@@ -10,7 +10,7 @@ const lineRight = ({ path }) => {
             style={{
               width: "100px",
               height: "100%",
-              borderLeft: "5px solid #3ea8b924",
+              borderLeft: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
               right: 0,
             }}
@@ -34,7 +34,7 @@ const lineRight = ({ path }) => {
             style={{
               width: "90px",
               height: "100%",
-              borderLeft: "5px solid #3ea8b924",
+              borderLeft: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
               right: 0,
             }}
