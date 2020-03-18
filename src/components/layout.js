@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import "./newLayout.css"
 import Navbar from "./navbar"
+import HomeIcon from "./homeIcon"
 import LineTop from "./background/lineTop"
 import LineBottom from "./background/lineBottom"
 import LineRight from "./background/lineRight"
@@ -34,6 +35,7 @@ const Layout = ({ children, path }) => {
       </div>
 
       <Navbar />
+      <HomeIcon path={path} />
       {children}
     </div>
   )
