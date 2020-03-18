@@ -5,21 +5,56 @@ const lineRight = ({ path }) => {
   return (
     <AnimatePresence>
       {(path == "/projects/" || path == "/contact/") && (
-        <motion.div
-          style={{
-            width: "100px",
-            height: "100%",
-            borderLeft: "5px solid #3ea8b94a",
-            position: "absolute",
-            right: 0,
-          }}
-          initial={{ y: "-100vh" }}
-          animate={{ y: 0, transition: { ease: "easeOut", duration: 5 } }}
-          exit={{
-            y: "100vh",
-            transition: { ease: "easeOut", duration: 5 },
-          }}
-        />
+        <div>
+          <motion.div
+            style={{
+              width: "100px",
+              height: "100%",
+              borderLeft: "5px solid #3ea8b924",
+              position: "absolute",
+              right: 0,
+            }}
+            initial={{ y: "-100vh" }}
+            animate={{
+              y: 0,
+              transition: {
+                ease: "easeOut",
+                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+              },
+            }}
+            exit={{
+              y: "100vh",
+              transition: {
+                ease: "easeOut",
+                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+              },
+            }}
+          />
+          <motion.div
+            style={{
+              width: "90px",
+              height: "100%",
+              borderLeft: "5px solid #3ea8b924",
+              position: "absolute",
+              right: 0,
+            }}
+            initial={{ y: "-100vh" }}
+            animate={{
+              y: 0,
+              transition: {
+                ease: "easeOut",
+                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+              },
+            }}
+            exit={{
+              y: "100vh",
+              transition: {
+                ease: "easeOut",
+                duration: Math.floor(Math.random() * (7 - 4 + 1) + 4),
+              },
+            }}
+          />
+        </div>
       )}
     </AnimatePresence>
   )
