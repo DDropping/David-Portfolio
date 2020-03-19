@@ -1,5 +1,4 @@
 import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion } from "framer-motion"
 

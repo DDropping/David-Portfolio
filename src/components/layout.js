@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { AnimatePresence } from "framer-motion"
 
 import "./newLayout.css"
 import Navbar from "./navbar"
@@ -33,7 +34,7 @@ const Layout = ({ children, path }) => {
       </div>
       <div style={{ maxWidth: "1200px", margin: "auto" }}>
         <div style={{ width: "100%", height: "100px" }}>
-          {path !== "/" && <Navbar path={path} />}
+          <Navbar path={path} />
         </div>
         <div style={{ MaxWidth: "100%", height: "calc(100vh - 100px)" }}>
           {children}

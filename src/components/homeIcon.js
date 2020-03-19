@@ -5,43 +5,46 @@ import TransitionLink from "gatsby-plugin-transition-link"
 const homeIcon = ({ path }) => {
   return (
     <AnimatePresence>
-      <TransitionLink exit={{ length: 0.0 }} entry={{ delay: 0.0 }} to="/">
-        <motion.div
-          style={{
-            width: "33px",
-            height: "33px",
-            position: "absolute",
-            top: "20px",
-            left: "20px",
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          whileTap={{ scale: 0.75 }}
-          exit={{
-            opacity: 0,
-            transition: { ease: "easeOut", duration: 1 },
-          }}
-        >
-          <div
+      {path !== "/" && (
+        <TransitionLink exit={{ length: 0.5 }} entry={{ delay: 0.5 }} to="/">
+          <motion.div
             style={{
-              width: "25px",
-              height: "25px",
-              border: "4px solid #3ea8b9",
+              width: "33px",
+              height: "33px",
               position: "absolute",
+              top: "20px",
+              left: "20px",
             }}
-          />
-          <div
-            style={{
-              width: "25px",
-              height: "25px",
-              border: "4px solid #3ea8b9",
-              position: "absolute",
-              top: "7px",
-              left: "7px",
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            whileTap={{ scale: 0.75 }}
+            exit={{
+              opacity: 0,
+              transition: { ease: "easeOut", duration: 1 },
             }}
-          />
-        </motion.div>
-      </TransitionLink>
+          >
+            <div
+              style={{
+                width: "25px",
+                height: "25px",
+                border: "4px solid #3ea8b9",
+                position: "absolute",
+              }}
+            />
+            <div
+              style={{
+                width: "25px",
+                height: "25px",
+                border: "4px solid #3ea8b9",
+                position: "absolute",
+                top: "7px",
+                left: "7px",
+              }}
+            />
+          </motion.div>
+        </TransitionLink>
+      )}
     </AnimatePresence>
   )
 }

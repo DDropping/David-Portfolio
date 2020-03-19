@@ -1,6 +1,6 @@
 import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 import navbarStyles from "./navbar.module.scss"
 import HomeIcon from "./homeIcon"
@@ -14,28 +14,33 @@ const navbar = ({ path }) => {
   return (
     <div className={navbarStyles.container}>
       <HomeIcon path={path} />
-      <motion.ul className={navbarStyles.navbarul}>
-        {pages.map(page => {
-          return (
-            <motion.li
-              key={page.title + page.delay}
-              initial={{ y: "-100px" }}
-              animate={{ y: 0 }}
-              transition={{ delay: page.delay }}
-              className={navbarStyles.navbarli}
-            >
-              <TransitionLink
-                className={navbarStyles.link}
-                exit={{ length: 0.5 }}
-                entry={{ delay: 0.25 }}
-                to={`/${page.title.toLowerCase()}/`}
-              >
-                {page.title}
-              </TransitionLink>
-            </motion.li>
-          )
-        })}
-      </motion.ul>
+      <AnimatePresence>
+        {path !== "/" && (
+          <ul className={navbarStyles.navbarul}>
+            {pages.map(page => {
+              return (
+                <motion.li
+                  key={page.title + page.delay}
+                  initial={{ opacity: 0, y: "-100px" }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: "-100px" }}
+                  transition={{ delay: page.delay }}
+                  className={navbarStyles.navbarli}
+                >
+                  <TransitionLink
+                    className={navbarStyles.link}
+                    exit={{ length: 0.5 }}
+                    entry={{ delay: 0.5 }}
+                    to={`/${page.title.toLowerCase()}/`}
+                  >
+                    {page.title}
+                  </TransitionLink>
+                </motion.li>
+              )
+            })}
+          </ul>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
