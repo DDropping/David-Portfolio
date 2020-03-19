@@ -36,6 +36,7 @@ const index = () => {
           return (
             <div className={indexStyles.container}>
               <motion.div
+                className={indexStyles.logoMenuWrapper}
                 variants={variants}
                 initial={"logoHidden"}
                 animate={
@@ -43,7 +44,6 @@ const index = () => {
                     ? "logoShow"
                     : "logoHidden"
                 }
-                className={indexStyles.logo}
               >
                 <Logo />
                 <HomeNav />

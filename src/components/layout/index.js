@@ -10,33 +10,17 @@ import LineLeft from "../background/lineLeft"
 
 const Layout = ({ children, path }) => {
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          zIndex: "-10",
-        }}
-      >
+    <div>
+      <div className="background-lines">
         <LineTop path={path} />
         <LineBottom path={path} />
         <LineRight path={path} />
         <LineLeft path={path} />
       </div>
 
-      <div style={{ maxWidth: "1200px", margin: "auto" }}>
-        <div style={{ width: "100%", height: "100%" }}>
-          <Navbar path={path} />
-        </div>
-        <div style={{ MaxWidth: "100%", height: "100%" }}>{children}</div>
+      <div className="main-container">
+        <Navbar path={path} />
+        {children}
       </div>
     </div>
   )
