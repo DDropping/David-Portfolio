@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import { motion, AnimatePresence } from "framer-motion"
 
 import "./newLayout.css"
 import Navbar from "./navbar"
-import HomeIcon from "./homeIcon"
 import LineTop from "./background/lineTop"
 import LineBottom from "./background/lineBottom"
 import LineRight from "./background/lineRight"
@@ -33,10 +31,14 @@ const Layout = ({ children, path }) => {
         <LineRight path={path} />
         <LineLeft path={path} />
       </div>
-
-      <Navbar path={path} />
-      <HomeIcon path={path} />
-      {children}
+      <div style={{ maxWidth: "1200px", margin: "auto" }}>
+        <div style={{ width: "100%", height: "100px" }}>
+          {path !== "/" && <Navbar path={path} />}
+        </div>
+        <div style={{ MaxWidth: "100%", height: "calc(100vh - 100px)" }}>
+          {children}
+        </div>
+      </div>
     </div>
   )
 }

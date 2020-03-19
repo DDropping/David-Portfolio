@@ -1,0 +1,17 @@
+.container {
+  width: 100vw;
+  height: calc(80vh - 100px);
+  display: table;
+}
+
+.logo {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.link {
+  text-decoration: none;
+  color: #3ea8b9;
+  padding: 2px;
+  margin: 0 5px;
+}

@@ -2,22 +2,20 @@ import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
 import { motion } from "framer-motion"
 
-import navbarStyles from "./navbar.module.scss"
-import HomeIcon from "./homeIcon"
+import HomeNavStyles from "./HomeNav.module.scss"
 
-const navbar = ({ path }) => {
+const HomeNav = () => {
   return (
-    <div className={navbarStyles.container}>
-      <HomeIcon path={path} />
-      <motion.ul className={navbarStyles.navbarul}>
+    <div className={HomeNavStyles.container}>
+      <motion.ul style={{ display: "inline-block", margin: "auto" }}>
         <motion.li
-          initial={{ y: "-100px" }}
-          animate={{ y: 0 }}
+          className={HomeNavStyles.homeNavLi}
+          initial={{ opacity: 0, y: "100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          className={navbarStyles.navbarli}
         >
           <TransitionLink
-            className={navbarStyles.link}
+            className={HomeNavStyles.link}
             exit={{ length: 0.5 }}
             entry={{ delay: 0.25 }}
             to={"/projects"}
@@ -27,13 +25,13 @@ const navbar = ({ path }) => {
         </motion.li>
 
         <motion.li
-          className={navbarStyles.navbarli}
-          initial={{ y: "-100px" }}
-          animate={{ y: 0 }}
+          className={HomeNavStyles.homeNavLi}
+          initial={{ opacity: 0, y: "100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
           <TransitionLink
-            className={navbarStyles.link}
+            className={HomeNavStyles.link}
             exit={{ length: 0.5 }}
             entry={{ delay: 0.25 }}
             to={"/about"}
@@ -43,13 +41,13 @@ const navbar = ({ path }) => {
         </motion.li>
 
         <motion.li
-          className={navbarStyles.navbarli}
-          initial={{ y: "-100px" }}
-          animate={{ y: 0 }}
+          className={HomeNavStyles.homeNavLi}
+          initial={{ opacity: 0, y: "100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
         >
           <TransitionLink
-            className={navbarStyles.link}
+            className={HomeNavStyles.link}
             exit={{ length: 0.5 }}
             entry={{ delay: 0.25 }}
             to={"/contact"}
@@ -62,4 +60,4 @@ const navbar = ({ path }) => {
   )
 }
 
-export default navbar
+export default HomeNav
