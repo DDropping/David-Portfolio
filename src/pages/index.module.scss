@@ -1,13 +1,15 @@
 .container {
-  height: calc(80vh - 100px);
+  height: 100vh;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo {
-  max-width: 1200px;
+  width: 100%;
   display: inline-block;
+  margin-top: -100px;
 }
 
 .link {

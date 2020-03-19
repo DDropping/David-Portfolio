@@ -1,7 +1,25 @@
+.ul {
+  float: right;
+  margin-right: 10%;
+}
+
+.li {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "sans-serif";
+  font-weight: bold;
+}
+
 .link {
   text-decoration: none;
-  color: #3ea8b9;
+  color: rgb(54, 54, 54);
   padding: 2px;
   margin: 0 15px;
   font-size: 2.5rem;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid rgb(114, 114, 114);
+  &:hover {
+    color: #3ea8b9;
+    border-bottom: 3px solid #3ea8b9;
+  }
 }

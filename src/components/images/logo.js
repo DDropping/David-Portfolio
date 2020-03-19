@@ -21,7 +21,7 @@ const Logo = () => {
   return (
     <div style={{ maxWidth: "1200px" }}>
       <Img
-        style={{ maxWidth: "600px", margin: "auto" }}
+        style={{ maxWidth: "700px", margin: "auto" }}
         fluid={data.image.childImageSharp.fluid}
       />
     </div>

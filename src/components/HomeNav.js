@@ -2,7 +2,7 @@ import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
 import { motion } from "framer-motion"
 
-import HomeNavStyles from "./HomeNav.module.scss"
+import homeNavStyles from "./HomeNav.module.scss"
 
 const HomeNav = () => {
   const pages = [
@@ -11,18 +11,19 @@ const HomeNav = () => {
     { title: "Contact", delay: 0.45 },
   ]
   return (
-    <motion.ul style={{ display: "inline-block" }}>
+    <motion.ul className={homeNavStyles.ul}>
       {pages.map(page => {
         return (
           <motion.li
+            className={homeNavStyles.li}
             key={page.title}
-            style={{ display: "inline-block" }}
-            initial={{ opacity: 0, y: "100px" }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: "100px" }}
+            animate={{ opacity: 1, x: 0 }}
+            whileTap={{ scale: 0.75, transition: { duration: 0.1 } }}
             transition={{ delay: page.delay }}
           >
             <TransitionLink
-              className={HomeNavStyles.link}
+              className={homeNavStyles.link}
               exit={{ length: 0.5 }}
               entry={{ delay: 0.25 }}
               to={`/${page.title.toLowerCase()}/`}
