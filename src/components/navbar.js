@@ -28,7 +28,11 @@ const navbar = ({ path }) => {
                   transition={{ delay: page.delay }}
                 >
                   <TransitionLink
-                    className={navbarStyles.link}
+                    className={
+                      path === `/${page.title.toLowerCase()}/`
+                        ? navbarStyles.linkActive
+                        : navbarStyles.link
+                    }
                     exit={{ length: 0.5 }}
                     entry={{ delay: 0.5 }}
                     to={`/${page.title.toLowerCase()}/`}

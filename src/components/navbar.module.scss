@@ -19,7 +19,21 @@
 
 .link {
   text-decoration: none;
-  color: #3ea8b9;
+  color: rgb(114, 114, 114);
   padding: 2px;
   margin: 0 5px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: #3ea8b9;
+    border-bottom: 2px solid #3ea8b9;
+  }
+}
+
+.linkActive {
+  text-decoration: none;
+  padding: 2px;
+  margin: 0 5px;
+  transition: all 0.2s ease-in-out;
+  color: #3ea8b9;
+  border-bottom: 2px solid #3ea8b9;
 }
