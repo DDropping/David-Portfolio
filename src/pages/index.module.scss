@@ -1,0 +1,17 @@
+.container {
+  height: calc(100vh - 80px);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logoMenuWrapper {
+  width: 100%;
+  display: inline-block;
+}
+
+.link {
+  text-decoration: none;
+  color: #3ea8b9;
+  padding: 2px;
+  margin: 0 5px;
+}

@@ -1,8 +1,31 @@
 import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { TransitionState } from "gatsby-plugin-transition-link"
+import { motion } from "framer-motion"
 
+import indexStyles from "./index.module.scss"
 import SEO from "../components/seo"
+import Logo from "../components/images/logo"
+import HomeNav from "../components/navigation/HomeNav"
+
+const variants = {
+  logoHidden: {
+    y: 100,
+    opacity: 0,
+    transition: {
+      type: "spring",
+      damping: 200,
+      mass: 0.1,
+    },
+  },
+  logoShow: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 20,
+    },
+  },
+}
 
 const index = () => {
   return (
@@ -11,9 +34,20 @@ const index = () => {
       <TransitionState>
         {({ transitionStatus }) => {
           return (
-            <div>
-              <div>David Dropping</div>
-              <div>FullStack engineer</div>
+            <div className={indexStyles.container}>
+              <motion.div
+                className={indexStyles.logoMenuWrapper}
+                variants={variants}
+                initial={"logoHidden"}
+                animate={
+                  ["entering", "entered"].includes(transitionStatus)
+                    ? "logoShow"
+                    : "logoHidden"
+                }
+              >
+                <Logo />
+                <HomeNav />
+              </motion.div>
             </div>
           )
         }}

@@ -9,3 +9,16 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+.background-lines {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.layout-container {
+  max-width: 100vw;
+  height: 100vh;
+}
