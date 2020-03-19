@@ -21,7 +21,7 @@ const homeIcon = ({ path }) => {
             whileTap={{ scale: 0.75 }}
             exit={{
               opacity: 0,
-              transition: { ease: "easeOut", duration: 1 },
+              transition: { duration: 1 },
             }}
           >
             <div

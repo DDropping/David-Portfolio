@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const lineTop = ({ path }) => {
   return (
     <AnimatePresence>
-      {(path == "/" || path == "/contact/") && (
+      {(path === "/" || path === "/contact/") && (
         <div>
           <motion.div
             key="lineTop"

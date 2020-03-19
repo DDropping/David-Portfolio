@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const lineBottom = ({ path }) => {
   return (
     <AnimatePresence>
-      {(path == "/projects/" || path == "/about/") && (
+      {(path === "/projects/" || path === "/about/") && (
         <div>
           <motion.div
             style={{
