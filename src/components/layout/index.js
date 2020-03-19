@@ -18,7 +18,7 @@ const Layout = ({ children, path }) => {
         <LineLeft path={path} />
       </div>
 
-      <div className="main-container">
+      <div className="layout-container">
         <Navbar path={path} />
         {children}
       </div>
