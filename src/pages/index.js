@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import indexStyles from "./index.module.scss"
 import SEO from "../components/seo"
 import Logo from "../components/images/logo"
-import HomeNav from "../components/HomeNav"
+import HomeNav from "../components/navigation/HomeNav"
 
 const variants = {
   logoHidden: {

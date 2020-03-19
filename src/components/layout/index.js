@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import "./newLayout.css"
-import Navbar from "./navbar"
-import LineTop from "./background/lineTop"
-import LineBottom from "./background/lineBottom"
-import LineRight from "./background/lineRight"
-import LineLeft from "./background/lineLeft"
+import Navbar from "../navigation/navbar"
+import LineTop from "../background/lineTop"
+import LineBottom from "../background/lineBottom"
+import LineRight from "../background/lineRight"
+import LineLeft from "../background/lineLeft"
 
 const Layout = ({ children, path }) => {
   return (
