@@ -47,7 +47,6 @@ const index = () => {
                 className={indexStyles.logo}
               >
                 <Logo />
-
                 <HomeNav />
               </motion.div>
             </div>

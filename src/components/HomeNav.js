@@ -11,12 +11,12 @@ const HomeNav = () => {
     { title: "Contact", delay: 0.45 },
   ]
   return (
-    <motion.ul>
+    <motion.ul style={{ display: "inline-block" }}>
       {pages.map(page => {
         return (
           <motion.li
             key={page.title}
-            className={HomeNavStyles.homeNavLi}
+            style={{ display: "inline-block" }}
             initial={{ opacity: 0, y: "100px" }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: page.delay }}

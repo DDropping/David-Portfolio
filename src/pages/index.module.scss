@@ -1,12 +1,13 @@
 .container {
-  width: 100vw;
   height: calc(80vh - 100px);
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  vertical-align: middle;
-  display: table-cell;
+  max-width: 1200px;
+  display: inline-block;
 }
 
 .link {
