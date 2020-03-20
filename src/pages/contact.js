@@ -1,7 +1,14 @@
 import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
 import { TransitionState } from "gatsby-plugin-transition-link"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { Row, Col } from "react-bootstrap"
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaEnvelopeSquare,
+  FaFacebookSquare,
+} from "react-icons/fa"
 
 import contactStyles from "./contact.module.scss"
 import SEO from "../components/seo"
@@ -43,7 +50,50 @@ const contact = () => {
                   : "contentHide"
               }
             >
-              <div>contact</div>
+              <AnimatePresence>
+                <motion.a
+                  href="http://github.com/DDropping"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { delay: 0.15 } }}
+                  exit={{ opacity: 0 }}
+                >
+                  <FaGithubSquare className={contactStyles.icon} />
+                </motion.a>
+                <motion.a
+                  href="http://www.linkedin.com/in/ddropping/"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { delay: 0.3 } }}
+                  exit={{ opacity: 0 }}
+                >
+                  <FaLinkedin className={contactStyles.icon} />
+                </motion.a>
+                <motion.a
+                  href="https://www.facebook.com/david.dropping"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { delay: 0.45 } }}
+                  exit={{ opacity: 0 }}
+                >
+                  <FaFacebookSquare className={contactStyles.icon} />
+                </motion.a>
+                <motion.a
+                  href="mailto:ddropping@gmail.com"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { delay: 0.6 } }}
+                  exit={{ opacity: 0 }}
+                >
+                  <FaEnvelopeSquare className={contactStyles.icon} />
+                </motion.a>
+              </AnimatePresence>
+              <h2>
+                For the fastest response, send me an email at
+                <br />
+                <a
+                  style={{ color: "#3ea8b9" }}
+                  href="mailto:ddropping@gmail.com"
+                >
+                  ddropping@gmail.com
+                </a>
+              </h2>
             </motion.div>
           )
         }}
