@@ -35,7 +35,7 @@ const lineBottom = ({ path }) => {
             key="lineBottom2"
             style={{
               width: "100%",
-              height: "90px",
+              height: "70px",
               borderTop: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
               bottom: 0,

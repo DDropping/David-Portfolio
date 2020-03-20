@@ -34,7 +34,7 @@ const lineLeft = ({ path }) => {
           <motion.div
             key="lineLeft2"
             style={{
-              width: "90px",
+              width: "70px",
               height: "100%",
               borderRight: "5px solid rgba(62, 168, 185, 0.1)",
               position: "absolute",
