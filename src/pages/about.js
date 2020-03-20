@@ -45,6 +45,7 @@ const about = () => {
               }
             >
               <div>about</div>
+              <Profile />
             </motion.div>
           )
         }}

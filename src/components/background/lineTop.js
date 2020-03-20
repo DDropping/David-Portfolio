@@ -32,7 +32,7 @@ const lineTop = ({ path }) => {
             }}
           />
           <motion.div
-            key="lineTop"
+            key="lineTop2"
             style={{
               width: "100%",
               height: "90px",
