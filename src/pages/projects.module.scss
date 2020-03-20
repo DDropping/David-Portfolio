@@ -1,4 +1,33 @@
 .container {
-  height: calc(100vh - 80px);
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+}
+
+.projectList {
+  padding-left: 20px;
+  font-family: "sans-serif";
+  display: inline-block;
+}
+
+.projectContainer {
+  margin: 20px 10px;
+  transition: all 0.2s ease-in-out;
+  &:hover .projectTitle {
+    color: #3ea8b9;
+  }
+}
+
+.projectTitle {
+  transition: all 0.2s ease-in-out;
+  font-size: 2rem;
+}
+
+.projectDescription {
+}
+
+.projectImage {
+  display: inline-block;
+  width: calc(100%-300px);
+  height: 400px;
+  background-color: red;
 }
