@@ -14,18 +14,25 @@
   }
 }
 
+.icon {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+a {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #22252a;
+  &:hover {
+    color: #3ea8b9;
+  }
+}
+
 p {
   text-indent: 50px;
 }
-
-@media (max-width: 500px) {
-  h1 {
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
-  }
-  h5 {
+.header {
+  @media (max-width: 765px) {
     text-align: center;
   }
 }
