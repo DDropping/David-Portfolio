@@ -1,0 +1,31 @@
+.container {
+  padding: 0 110px;
+  font-family: "sans-serif";
+  @media (max-width: 500px) {
+    padding: 0 20px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #3ea8b9;
+  &:hover {
+    color: #3ea8b9;
+  }
+}
+
+p {
+  text-indent: 50px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  h5 {
+    text-align: center;
+  }
+}
