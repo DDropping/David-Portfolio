@@ -2,7 +2,7 @@ import React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import TransitionLink from "gatsby-plugin-transition-link"
 
-const homeIcon = ({ path }) => {
+const HomeIcon = ({ path }) => {
   return (
     <AnimatePresence>
       {path !== "/" && (
@@ -48,4 +48,4 @@ const homeIcon = ({ path }) => {
   )
 }
 
-export default homeIcon
+export default HomeIcon

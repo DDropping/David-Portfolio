@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 
 import aboutStyles from "./about.module.scss"
 import SEO from "../components/seo"
+import Profile from "../components/images/profile"
 
 const about = () => {
   const variants = {
