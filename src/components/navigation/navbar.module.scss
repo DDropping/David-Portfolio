@@ -8,6 +8,7 @@
 .navbarul {
   display: block;
   float: right;
+  margin: 10px;
 }
 
 .navbarli {
@@ -15,7 +16,7 @@
   font-size: 1.5rem;
   text-align: 1.5rem;
   padding: "10px 20px";
-  font-family: "sans serif";
+  font-family: "sans-serif";
 }
 
 .link {
@@ -25,6 +26,7 @@
   margin: 0 5px;
   transition: all 0.2s ease-in-out;
   &:hover {
+    text-decoration: none;
     color: #3ea8b9;
     border-bottom: 2px solid #3ea8b9;
   }
@@ -37,4 +39,9 @@
   transition: all 0.2s ease-in-out;
   color: #3ea8b9;
   border-bottom: 2px solid #3ea8b9;
+  &:hover {
+    text-decoration: none;
+    color: #3ea8b9;
+    border-bottom: 2px solid #3ea8b9;
+  }
 }

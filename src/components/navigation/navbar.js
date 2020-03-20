@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import navbarStyles from "./navbar.module.scss"
 import HomeIcon from "./homeIcon"
 
-const navbar = ({ path }) => {
+const Navbar = ({ path }) => {
   const pages = [
     { title: "Projects", delay: 0.15 },
     { title: "About", delay: 0.3 },
@@ -49,4 +49,4 @@ const navbar = ({ path }) => {
   )
 }
 
-export default navbar
+export default Navbar
