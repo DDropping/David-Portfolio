@@ -85,7 +85,7 @@ const contact = () => {
                 </motion.a>
               </AnimatePresence>
               <h2>
-                For the fastest response, email at:
+                For the fastest response, send me an email at
                 <br />
                 <a
                   style={{ color: "#3ea8b9" }}
