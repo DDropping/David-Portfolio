@@ -1,8 +1,6 @@
 import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Row, Col } from "react-bootstrap"
 import {
   FaGithubSquare,
   FaLinkedin,
