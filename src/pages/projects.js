@@ -10,7 +10,7 @@ import ProjectList from "../components/projects/projectList"
 const projects = () => {
   const variants = {
     contentHide: {
-      x: -100,
+      y: 100,
       opacity: 0,
       transition: {
         type: "spring",
@@ -19,7 +19,7 @@ const projects = () => {
       },
     },
     contentShow: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",

@@ -7,13 +7,42 @@ import contactStyles from "./contact.module.scss"
 import SEO from "../components/seo"
 
 const contact = () => {
+  const variants = {
+    contentHide: {
+      y: 100,
+      opacity: 0,
+      transition: {
+        type: "spring",
+        damping: 200,
+        mass: 0.1,
+      },
+    },
+    contentShow: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 20,
+      },
+    },
+  }
+
   return (
     <div>
       <SEO title="Contact" />
       <TransitionState>
         {({ transitionStatus }) => {
           return (
-            <motion.div>
+            <motion.div
+              className={contactStyles.container}
+              variants={variants}
+              initial={"contentHide"}
+              animate={
+                ["entering", "entered"].includes(transitionStatus)
+                  ? "contentShow"
+                  : "contentHide"
+              }
+            >
               <div>contact</div>
             </motion.div>
           )

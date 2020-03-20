@@ -7,13 +7,42 @@ import aboutStyles from "./about.module.scss"
 import SEO from "../components/seo"
 
 const about = () => {
+  const variants = {
+    contentHide: {
+      y: 100,
+      opacity: 0,
+      transition: {
+        type: "spring",
+        damping: 200,
+        mass: 0.1,
+      },
+    },
+    contentShow: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 20,
+      },
+    },
+  }
+
   return (
     <div>
       <SEO title="About" />
       <TransitionState>
         {({ transitionStatus }) => {
           return (
-            <motion.div>
+            <motion.div
+              className={aboutStyles.container}
+              variants={variants}
+              initial={"contentHide"}
+              animate={
+                ["entering", "entered"].includes(transitionStatus)
+                  ? "contentShow"
+                  : "contentHide"
+              }
+            >
               <div>about</div>
             </motion.div>
           )
