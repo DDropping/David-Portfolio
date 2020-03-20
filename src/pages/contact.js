@@ -9,7 +9,16 @@ import SEO from "../components/seo"
 const contact = () => {
   return (
     <div>
-      <div>contact</div>
+      <SEO title="Contact" />
+      <TransitionState>
+        {({ transitionStatus }) => {
+          return (
+            <motion.div>
+              <div>contact</div>
+            </motion.div>
+          )
+        }}
+      </TransitionState>
     </div>
   )
 }

@@ -9,8 +9,16 @@ import SEO from "../components/seo"
 const about = () => {
   return (
     <div>
-      <SEO title="Home" />
-      <div>about</div>
+      <SEO title="About" />
+      <TransitionState>
+        {({ transitionStatus }) => {
+          return (
+            <motion.div>
+              <div>about</div>
+            </motion.div>
+          )
+        }}
+      </TransitionState>
     </div>
   )
 }
