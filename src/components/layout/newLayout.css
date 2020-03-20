@@ -19,6 +19,7 @@ html {
 }
 
 .layout-container {
-  max-width: 100vw;
+  max-width: 1200px;
   height: 100vh;
+  margin: auto;
 }

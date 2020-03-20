@@ -5,11 +5,12 @@ import { motion } from "framer-motion"
 
 import projectsStyles from "./projects.module.scss"
 import SEO from "../components/seo"
+import ProjectList from "../components/projects/projectList"
 
 const projects = () => {
   const variants = {
     contentHide: {
-      x: -100,
+      y: 100,
       opacity: 0,
       transition: {
         type: "spring",
@@ -18,7 +19,7 @@ const projects = () => {
       },
     },
     contentShow: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -43,7 +44,7 @@ const projects = () => {
                   : "contentHide"
               }
             >
-              projects
+              <ProjectList />
             </motion.div>
           )
         }}

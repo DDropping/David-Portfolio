@@ -7,6 +7,7 @@ const lineRight = ({ path }) => {
       {(path === "/projects/" || path === "/contact/") && (
         <div>
           <motion.div
+            key="lineRight"
             style={{
               width: "80px",
               height: "100%",
@@ -31,6 +32,7 @@ const lineRight = ({ path }) => {
             }}
           />
           <motion.div
+            key="lineRight2"
             style={{
               width: "90px",
               height: "100%",
