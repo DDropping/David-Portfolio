@@ -1,36 +1,39 @@
 import React from "react"
 import TransitionLink from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import projectStyles from "../../pages/projects"
 
-const projectList = () => {
-  const projects = [
-    {
-      title: "BoardRack",
-      description:
-        "Classified advertisement platform for buying and selling new and used surfboards",
-      image: "",
-      stack: ["React", "Redux", "MongoDB", "Node", "Express", "Ant-Design"],
-      delay: 0.15,
-    },
-    {
-      title: "Portfolio",
-      description:
-        "Classified advertisement platform for buying and selling new and used surfboards",
-      image: "",
-      stack: ["React", "Redux", "MongoDB", "Node", "Express", "Ant-Design"],
-      delay: 0.3,
-    },
-    {
-      title: "GatorRent",
-      description:
-        "Classified advertisement platform for buying and selling new and used surfboards",
-      image: "",
-      stack: ["React", "Redux", "MongoDB", "Node", "Express", "Ant-Design"],
-      delay: 0.45,
-    },
-  ]
+const ProjectList = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      portfolio: file(relativePath: { eq: "project-portfolio.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      boardrack: file(relativePath: { eq: "project-boardrack.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sfsurent: file(relativePath: { eq: "project-sfsurent.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data)
 
   return (
     <div className={projectStyles.projectListContainer}>
@@ -39,4 +42,4 @@ const projectList = () => {
   )
 }
 
-export default projectList
+export default ProjectList
