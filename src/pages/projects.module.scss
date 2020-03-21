@@ -20,6 +20,7 @@
 .projectListItem {
   transition: all 0.2s ease-in-out;
   margin-bottom: 20px;
+  cursor: pointer;
   &:hover .title {
     color: #3ea8b9;
   }
