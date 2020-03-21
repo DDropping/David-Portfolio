@@ -2,7 +2,6 @@
   min-height: calc(100vh - 80px);
   width: 100%;
   padding: 0;
-  transition: all 0.2s ease-in-out;
   @media (max-width: 1200px) {
     padding: 0 20px;
   }
@@ -19,6 +18,15 @@
 }
 
 .projectListItem {
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 20px;
+  &:hover .title {
+    color: #3ea8b9;
+  }
+}
+
+.title {
+  transition: all 0.2s ease-in-out;
 }
 
 .titleActive {
@@ -51,25 +59,7 @@
   }
 }
 
-// .projectContainer {
-//   margin: 20px 10px;
-//   transition: all 0.2s ease-in-out;
-//   &:hover .projectTitle {
-//     color: #3ea8b9;
-//   }
-// }
-
-// .projectTitle {
-//   transition: all 0.2s ease-in-out;
-//   font-size: 2rem;
-// }
-
-// .projectDescription {
-// }
-
-// .projectImage {
-//   display: inline-block;
-//   width: calc(100%-300px);
-//   height: 400px;
-//   background-color: red;
-// }
+.technology {
+  font-family: "sans-serif";
+  margin: 20px;
+}

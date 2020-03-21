@@ -4,6 +4,7 @@ import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Row, Col } from "react-bootstrap"
 
 import projectsStyles from "./projects.module.scss"
 import SEO from "../components/seo"
@@ -41,7 +42,7 @@ const Projects = () => {
 
   const variants = {
     listInitial: {
-      x: "-100px",
+      x: "100px",
       opacity: 0,
     },
     listShow: {
@@ -49,6 +50,7 @@ const Projects = () => {
       opacity: 1,
     },
     listHide: {
+      x: "100px",
       opacity: 0,
     },
     imgInitial: {
@@ -82,17 +84,6 @@ const Projects = () => {
           return (
             <motion.div className={projectsStyles.container}>
               <div className={projectsStyles.projectList}>
-                <motion.h1
-                  variants={variants}
-                  initial={"listInitial"}
-                  animate={
-                    ["entering", "entered"].includes(transitionStatus)
-                      ? "listShow"
-                      : "listHide"
-                  }
-                >
-                  Projects
-                </motion.h1>
                 <motion.div
                   onClick={() => {
                     setBrVisible(true)
@@ -106,7 +97,6 @@ const Projects = () => {
                       ? "listShow"
                       : "listHide"
                   }
-                  transition={{ delay: 0.1 }}
                   className={projectsStyles.projectListItem}
                 >
                   <h2
@@ -139,7 +129,7 @@ const Projects = () => {
                       ? "listShow"
                       : "listHide"
                   }
-                  transition={{ delay: 0.2 }}
+                  transition={{ delay: 0.15 }}
                   className={projectsStyles.projectListItem}
                 >
                   <h2
@@ -218,6 +208,14 @@ const Projects = () => {
                         fluid={data.boardrack.childImageSharp.fluid}
                       />
                     </div>
+
+                    <div className={projectsStyles.technology}>
+                      <strong>Technologies Used:</strong> React, Redux, Node,
+                      Express, MongoDB, JWT, SASS/SCSS
+                      <br /> <br />
+                      <strong>APIs/Services:</strong> Developer.Here, IPStack,
+                      AWS, DigitalOcean
+                    </div>
                   </motion.div>
                 )}
 
@@ -245,6 +243,11 @@ const Projects = () => {
                         fluid={data.portfolio.childImageSharp.fluid}
                       />
                     </div>
+                    <div className={projectsStyles.technology}>
+                      <strong>Technologies Used:</strong> Gatsby, React,
+                      React-Bootstrap, Framer-Motion, SCSS, GraphQL
+                      <strong>APIs/Services:</strong> Netlify
+                    </div>
                   </motion.div>
                 )}
 
@@ -271,6 +274,13 @@ const Projects = () => {
                         }}
                         fluid={data.sfsurent.childImageSharp.fluid}
                       />
+                    </div>
+                    <div className={projectsStyles.technology}>
+                      <strong>Technologies Used:</strong> Node, MySQL, HTML5,
+                      CSS3
+                      <br /> <br />
+                      <strong>APIs/Services:</strong>
+                      AWS, Google Maps
                     </div>
                   </motion.div>
                 )}
