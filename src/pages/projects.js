@@ -1,10 +1,8 @@
 import React, { useState } from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Row, Col } from "react-bootstrap"
 
 import projectsStyles from "./projects.module.scss"
 import SEO from "../components/seo"
@@ -16,21 +14,21 @@ const Projects = () => {
       portfolio: file(relativePath: { eq: "project-portfolio.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
       boardrack: file(relativePath: { eq: "project-boardrack.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
       sfsurent: file(relativePath: { eq: "project-sfsurent.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
