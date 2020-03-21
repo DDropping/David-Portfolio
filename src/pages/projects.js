@@ -8,12 +8,9 @@ import { Row, Col } from "react-bootstrap"
 
 import projectsStyles from "./projects.module.scss"
 import SEO from "../components/seo"
-import ProjectList from "../components/projects/projectList"
 
 const Projects = () => {
-  const [brVisible, setBrVisible] = useState(true)
-  const [pVisible, setPVisible] = useState(false)
-  const [srVisible, setSrVisible] = useState(false)
+  const [imgSelector, setImageSelector] = useState("boardrack")
   const data = useStaticQuery(graphql`
     query {
       portfolio: file(relativePath: { eq: "project-portfolio.png" }) {
@@ -86,9 +83,7 @@ const Projects = () => {
               <div className={projectsStyles.projectList}>
                 <motion.div
                   onClick={() => {
-                    setBrVisible(true)
-                    setPVisible(false)
-                    setSrVisible(false)
+                    setImageSelector("boardrack")
                   }}
                   variants={variants}
                   initial={"listInitial"}
@@ -101,7 +96,7 @@ const Projects = () => {
                 >
                   <h2
                     className={
-                      brVisible
+                      imgSelector === "boardrack"
                         ? projectsStyles.titleActive
                         : projectsStyles.title
                     }
@@ -127,9 +122,7 @@ const Projects = () => {
 
                 <motion.div
                   onClick={() => {
-                    setBrVisible(false)
-                    setPVisible(true)
-                    setSrVisible(false)
+                    setImageSelector("portfolio")
                   }}
                   variants={variants}
                   initial={"listInitial"}
@@ -143,7 +136,7 @@ const Projects = () => {
                 >
                   <h2
                     className={
-                      pVisible
+                      imgSelector === "portfolio"
                         ? projectsStyles.titleActive
                         : projectsStyles.title
                     }
@@ -168,9 +161,7 @@ const Projects = () => {
 
                 <motion.div
                   onClick={() => {
-                    setBrVisible(false)
-                    setPVisible(false)
-                    setSrVisible(true)
+                    setImageSelector("sfsurent")
                   }}
                   variants={variants}
                   initial={"listInitial"}
@@ -184,7 +175,7 @@ const Projects = () => {
                 >
                   <h2
                     className={
-                      srVisible
+                      imgSelector === "sfsurent"
                         ? projectsStyles.titleActive
                         : projectsStyles.title
                     }
@@ -209,7 +200,7 @@ const Projects = () => {
               </div>
 
               <AnimatePresence>
-                {brVisible && (
+                {imgSelector === "boardrack" && (
                   <motion.div
                     className={projectsStyles.projectImageContainer}
                     key={"boardrack"}
@@ -244,7 +235,7 @@ const Projects = () => {
                   </motion.div>
                 )}
 
-                {pVisible && (
+                {imgSelector === "portfolio" && (
                   <motion.div
                     key={"portfolio"}
                     variants={variants}
@@ -278,7 +269,7 @@ const Projects = () => {
                   </motion.div>
                 )}
 
-                {srVisible && (
+                {imgSelector === "sfsurent" && (
                   <motion.div
                     key={"sfsurent"}
                     variants={variants}
