@@ -114,6 +114,15 @@ const Projects = () => {
                     className={projectsStyles.projectImageSmallScreen}
                     fluid={data.boardrack.childImageSharp.fluid}
                   />
+                  <div
+                    className={projectsStyles.projectTechnologiesSmallScreen}
+                  >
+                    <strong>Technologies Used:</strong> React, Redux, Node,
+                    Express, MongoDB, JWT, SASS/SCSS
+                    <br />
+                    <strong>APIs/Services:</strong> Developer.Here, IPStack,
+                    AWS, DigitalOcean
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -147,6 +156,14 @@ const Projects = () => {
                     className={projectsStyles.projectImageSmallScreen}
                     fluid={data.portfolio.childImageSharp.fluid}
                   />
+                  <div
+                    className={projectsStyles.projectTechnologiesSmallScreen}
+                  >
+                    <strong>Technologies Used:</strong> Gatsby, React,
+                    React-Bootstrap, Framer-Motion, SCSS, GraphQL
+                    <br />
+                    <strong>APIs/Services:</strong> Netlify
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -180,6 +197,14 @@ const Projects = () => {
                     className={projectsStyles.projectImageSmallScreen}
                     fluid={data.sfsurent.childImageSharp.fluid}
                   />
+                  <div
+                    className={projectsStyles.projectTechnologiesSmallScreen}
+                  >
+                    <strong>Technologies Used:</strong> Node, MySQL, HTML5, CSS3
+                    <br />
+                    <strong>APIs/Services:</strong>
+                    AWS, Google Maps
+                  </div>
                 </motion.div>
               </div>
 
@@ -246,6 +271,8 @@ const Projects = () => {
                     <div className={projectsStyles.technology}>
                       <strong>Technologies Used:</strong> Gatsby, React,
                       React-Bootstrap, Framer-Motion, SCSS, GraphQL
+                      <br />
+                      <br />
                       <strong>APIs/Services:</strong> Netlify
                     </div>
                   </motion.div>
