@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": "BoardRack",
+      "image": "../images/project-boardrack.png",
+      "description": "Classified advertisement platform for buying and selling new and used surfboards",
+      "technologies": [
+        "React",
+        "Redux",
+        "Node",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "SCSS"
+      ],
+      "services": ["Developer.Here", "IPStack", "AWS", "DigitalOcean"]
+    },
+    {
+      "title": "Portfolio",
+      "image": "../images/project-portfolio.png",
+      "description": "Personal portfolio to showcase my current and previous projects",
+      "technologies": [
+        "Gatsby",
+        "React",
+        "React-Bootstrap",
+        "Framer-Motion",
+        "SCSS",
+        "GraphQL"
+      ],
+      "services": ["Netlify"]
+    },
+    {
+      "title": "SFSU Rent",
+      "image": "../images/project-sfsurent.png",
+      "description": "Classified advertisement platform for students to find housing in the SF Bay Area",
+      "technologies": ["Node", "MySQL", "HTML5", "CSS3"],
+      "services": ["AWS", "Google Maps"]
+    }
+  ]
+}

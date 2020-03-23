@@ -1,8 +1,6 @@
 import React from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Row, Col } from "react-bootstrap"
 import {
   FaGithubSquare,
   FaLinkedin,
@@ -52,6 +50,7 @@ const contact = () => {
             >
               <AnimatePresence>
                 <motion.a
+                  key={"github"}
                   href="http://github.com/DDropping"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { delay: 0.15 } }}
@@ -60,6 +59,7 @@ const contact = () => {
                   <FaGithubSquare className={contactStyles.icon} />
                 </motion.a>
                 <motion.a
+                  key={"linkedin"}
                   href="http://www.linkedin.com/in/ddropping/"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { delay: 0.3 } }}
@@ -68,6 +68,7 @@ const contact = () => {
                   <FaLinkedin className={contactStyles.icon} />
                 </motion.a>
                 <motion.a
+                  key={"facebook"}
                   href="https://www.facebook.com/david.dropping"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { delay: 0.45 } }}
@@ -76,6 +77,7 @@ const contact = () => {
                   <FaFacebookSquare className={contactStyles.icon} />
                 </motion.a>
                 <motion.a
+                  key={"gmail"}
                   href="mailto:ddropping@gmail.com"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { delay: 0.6 } }}
