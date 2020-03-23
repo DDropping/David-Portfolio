@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const lineLeft = ({ path }) => {
   return (
     <AnimatePresence>
-      {(path === "/" || path === "/about/") && (
+      {(path === "/" || path === "/about/" || path === "/resume/") && (
         <div>
           <motion.div
             key="lineLeft"
