@@ -122,7 +122,7 @@ const About = () => {
                       Ant Design, VS Code, GraphQL
                     </strong>
                     . You can find my full resume{" "}
-                    <TransitionLink className={aboutStyles.link}>
+                    <TransitionLink to={"/resume"} className={aboutStyles.link}>
                       <strong>here</strong>
                     </TransitionLink>
                     .
@@ -156,7 +156,10 @@ const About = () => {
                     . If this sounds good to you, I’m ready to work, preferably
                     full-time. I’m open to working either local (SF Bay Area),
                     relocating anywhere in the United States, or remotely.{" "}
-                    <TransitionLink className={aboutStyles.link}>
+                    <TransitionLink
+                      to={"/contact"}
+                      className={aboutStyles.link}
+                    >
                       <strong>Reach out to me! I’d love to chat!</strong>
                     </TransitionLink>
                   </motion.p>

@@ -5,14 +5,25 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
     {
       resolve: "gatsby-plugin-transition-link",
       options: {
         layout: require.resolve(`./src/components/layout/index.js`),
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,8 +31,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

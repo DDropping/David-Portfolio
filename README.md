@@ -1,6 +1,6 @@
-# Portfolio Website 
+# Portfolio Website
 
-#### Built Using Gatsby, React, Framer-motion
+#### Built Using Gatsby, React, Framer-motion, SCSS
 
 ## Authors
 
