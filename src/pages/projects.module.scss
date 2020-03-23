@@ -51,12 +51,10 @@
 
 .projectImage {
   width: 100%;
-  box-shadow: 0 0 11px rgba(83, 68, 68, 0.5);
 }
 
 .projectImageSmallScreen {
   padding: 10px;
-  box-shadow: 0 0 11px rgba(83, 68, 68, 0.5);
   margin-bottom: 5vw;
   @media (min-width: 750px) {
     display: none;
