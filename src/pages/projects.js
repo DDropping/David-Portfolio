@@ -11,8 +11,6 @@ const Projects = ({ data }) => {
   const projects = data.dataJson.projects
   const [imgSelector, setImageSelector] = useState("BoardRack")
 
-  console.log(projects)
-
   const variants = {
     listInitial: {
       x: "100px",
