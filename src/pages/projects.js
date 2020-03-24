@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import projectsStyles from "./projects.module.scss"
@@ -12,18 +12,6 @@ const Projects = ({ data }) => {
   const [imgSelector, setImageSelector] = useState("BoardRack")
 
   const variants = {
-    listInitial: {
-      x: "100px",
-      opacity: 0,
-    },
-    listShow: {
-      x: 0,
-      opacity: 1,
-    },
-    listHide: {
-      x: "100px",
-      opacity: 0,
-    },
     imgInitial: {
       x: "-100px",
       opacity: 0,
@@ -55,18 +43,25 @@ const Projects = ({ data }) => {
           return (
             <motion.div className={projectsStyles.container}>
               <div className={projectsStyles.projectList}>
-                {projects.map(project => {
+                {projects.map((project, index) => {
                   return (
                     <motion.div
+                      key={project.title}
                       onClick={() => {
                         setImageSelector(project.title)
                       }}
-                      variants={variants}
-                      initial={"listInitial"}
+                      initial={{ x: "-100px", opacity: 0 }}
                       animate={
                         ["entering", "entered"].includes(transitionStatus)
-                          ? "listShow"
-                          : "listHide"
+                          ? {
+                              x: 0,
+                              opacity: 1,
+                              transition: {
+                                delay: 0.15 * index,
+                                ease: "easeOut",
+                              },
+                            }
+                          : { x: "100px", opacity: 0 }
                       }
                       className={projectsStyles.projectListItem}
                     >
@@ -165,7 +160,7 @@ export const query = graphql`
         image {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
