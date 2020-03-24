@@ -38,7 +38,11 @@ const Projects = ({ data }) => {
 
   return (
     <div>
-      <SEO title="Home" />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>David Dropping</title>
+      </Helmet>
+      <SEO title="Projects" />
       <TransitionState>
         {({ transitionStatus }) => {
           return (
