@@ -1,6 +1,7 @@
 import React from "react"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
+import { Helmet } from "react-helmet"
 import {
   FaGithubSquare,
   FaLinkedin,
@@ -34,6 +35,10 @@ const contact = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>David Dropping</title>
+      </Helmet>
       <SEO title="Contact" />
       <TransitionState>
         {({ transitionStatus }) => {

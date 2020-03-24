@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Row, Col } from "react-bootstrap"
+import { Helmet } from "react-helmet"
 import {
   FaGithubSquare,
   FaLinkedin,
@@ -50,6 +51,10 @@ const About = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>David Dropping</title>
+      </Helmet>
       <SEO title="About" />
       <TransitionState>
         {({ transitionStatus }) => {

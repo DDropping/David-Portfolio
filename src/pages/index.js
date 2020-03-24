@@ -1,6 +1,7 @@
 import React from "react"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion } from "framer-motion"
+import { Helmet } from "react-helmet"
 
 import indexStyles from "./index.module.scss"
 import SEO from "../components/seo"
@@ -30,6 +31,10 @@ const variants = {
 const index = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>David Dropping</title>
+      </Helmet>
       <SEO title="Home" />
       <TransitionState>
         {({ transitionStatus }) => {
