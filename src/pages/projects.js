@@ -38,7 +38,7 @@ const Projects = ({ data }) => {
 
   return (
     <div>
-      <SEO title="Home" />
+      <SEO title="Projects" />
       <TransitionState>
         {({ transitionStatus }) => {
           return (

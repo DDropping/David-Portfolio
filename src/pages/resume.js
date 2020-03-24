@@ -38,28 +38,31 @@ const Resume = () => {
   }
 
   return (
-    <TransitionState>
-      {({ transitionStatus }) => {
-        return (
-          <motion.div
-            variants={variants}
-            initial={"contentHide"}
-            animate={
-              ["entering", "entered"].includes(transitionStatus)
-                ? "contentShow"
-                : "contentHide"
-            }
-          >
-            <div style={{ maxWidth: "1200px" }}>
-              <Img
-                style={{ maxWidth: "700px", margin: "auto" }}
-                fluid={data.resume.childImageSharp.fluid}
-              />
-            </div>
-          </motion.div>
-        )
-      }}
-    </TransitionState>
+    <div>
+      <SEO title="Resume" />
+      <TransitionState>
+        {({ transitionStatus }) => {
+          return (
+            <motion.div
+              variants={variants}
+              initial={"contentHide"}
+              animate={
+                ["entering", "entered"].includes(transitionStatus)
+                  ? "contentShow"
+                  : "contentHide"
+              }
+            >
+              <div style={{ maxWidth: "1200px" }}>
+                <Img
+                  style={{ maxWidth: "700px", margin: "auto" }}
+                  fluid={data.resume.childImageSharp.fluid}
+                />
+              </div>
+            </motion.div>
+          )
+        }}
+      </TransitionState>
+    </div>
   )
 }
 
