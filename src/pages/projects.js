@@ -38,6 +38,10 @@ const Projects = ({ data }) => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>David Dropping</title>
+      </Helmet>
       <SEO title="Projects" />
       <TransitionState>
         {({ transitionStatus }) => {
