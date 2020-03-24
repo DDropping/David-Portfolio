@@ -1,8 +1,9 @@
 import React, { useState, Fragment } from "react"
+import Image from "gatsby-image"
 import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { Helmet } from "react-helmet"
 
 import projectsStyles from "./projects.module.scss"
 import SEO from "../components/seo"
