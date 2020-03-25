@@ -90,14 +90,9 @@ const Projects = ({ data }) => {
                         }
                       >
                         <strong>Technologies Used:</strong>{" "}
-                        {project.technologies.map(item => {
-                          return item
-                        })}
+                        {project.technologies}
                         <br />
-                        <strong>APIs/Services:</strong>{" "}
-                        {project.services.map(item => {
-                          return item
-                        })}
+                        <strong>APIs/Services:</strong> {project.services}
                       </div>
                     </motion.div>
                   )
@@ -134,11 +129,10 @@ const Projects = ({ data }) => {
                           </div>
 
                           <div className={projectsStyles.technology}>
-                            <strong>Technologies Used:</strong> React, Redux,
-                            Node, Express, MongoDB, JWT, SASS/SCSS
-                            <br /> <br />
-                            <strong>APIs/Services:</strong> Developer.Here,
-                            IPStack, AWS, DigitalOcean
+                            <strong>Technologies Used:</strong>{" "}
+                            {project.technologies}
+                            <br />
+                            <strong>APIs/Services:</strong> {project.services}
                           </div>
                         </motion.div>
                       )}
