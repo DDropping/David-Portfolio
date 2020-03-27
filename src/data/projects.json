@@ -5,21 +5,36 @@
       "image": "../images/project-boardrack.png",
       "description": "Classified advertisement platform for buying and selling new and used surfboards",
       "technologies": "React, Redux, Node, Express, MongoDB, JWT, SCSS",
-      "services": "Developer.Here, IPStack, AWS, DigitalOcean"
+      "services": "Developer.Here, IPStack, AWS, DigitalOcean",
+      "website": "na",
+      "github": "na"
+    },
+    {
+      "title": "Sams Designs",
+      "image": "../images/project-samsDesigns.png",
+      "description": "Ecommerce website for selling of custom designed apparel designed by Sam Kerrigan",
+      "technologies": "Gatsby, React, Node, SCSS, GraphQL",
+      "services": "Contentful, Stripe, Neftlify",
+      "website": "https://samsdesigns.netlify.com/",
+      "github": "https://github.com/DDropping/ecommerce"
     },
     {
       "title": "Portfolio",
       "image": "../images/project-portfolio.png",
       "description": "Personal portfolio to showcase my current and previous projects",
       "technologies": "Gatsby, React, React-Bootstrap, Node, Framer-Motion, SCSS, GraphQL",
-      "services": "Netlify"
+      "services": "Netlify",
+      "website": "https://www.ddropping.com/",
+      "github": "https://github.com/DDropping/David-Portfolio"
     },
     {
       "title": "SFSU Rent",
       "image": "../images/project-sfsurent.png",
       "description": "Classified advertisement platform for students to find housing in the SF Bay Area",
       "technologies": "Node, MySQL, HTML5, CSS3",
-      "services": "AWS, Google Maps"
+      "services": "AWS, Google Maps",
+      "website": "http://ec2-18-144-46-90.us-west-1.compute.amazonaws.com/listing/",
+      "github": "https://github.com/DDropping/SFSURent"
     }
   ]
 }
