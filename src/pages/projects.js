@@ -135,6 +135,7 @@ const Projects = ({ data }) => {
                                 className={projectsStyles.link}
                                 href={project.github}
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 <FaGithub />
                                 Github Repository
@@ -143,6 +144,7 @@ const Projects = ({ data }) => {
                                 className={projectsStyles.link}
                                 href={project.website}
                                 target="_blank"
+                                rel="noopener noreferrer"
                               >
                                 <IoIosGlobe />
                                 Live Site
