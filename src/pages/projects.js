@@ -4,6 +4,8 @@ import { TransitionState } from "gatsby-plugin-transition-link"
 import { motion, AnimatePresence } from "framer-motion"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import { FaGithub } from "react-icons/fa"
+import { IoIosGlobe } from "react-icons/io"
 
 import projectsStyles from "./projects.module.scss"
 import SEO from "../components/seo"
@@ -127,6 +129,26 @@ const Projects = ({ data }) => {
                               fluid={project.image.childImageSharp.fluid}
                             />
                           </div>
+                          {project.website !== "na" && (
+                            <div className={projectsStyles.links}>
+                              <a
+                                className={projectsStyles.link}
+                                href={project.github}
+                                target="_blank"
+                              >
+                                <FaGithub />
+                                Github Repository
+                              </a>
+                              <a
+                                className={projectsStyles.link}
+                                href={project.website}
+                                target="_blank"
+                              >
+                                <IoIosGlobe />
+                                Live Site
+                              </a>
+                            </div>
+                          )}
 
                           <div className={projectsStyles.technology}>
                             <strong>Technologies Used:</strong>{" "}
@@ -156,6 +178,8 @@ export const query = graphql`
         description
         technologies
         services
+        website
+        github
         image {
           childImageSharp {
             fluid {
